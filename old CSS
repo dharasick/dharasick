@@ -1,0 +1,719 @@
+/*********** CSS by barroomhero 12.18.2012 ************************/
+/*********** old stylesheet: http://pastebin.com/uA95zwsz *********/
+
+/********** CONTENT & BODY **********/
+
+/* Background Image */
+body {
+    background: url(%%rfflogobig5percent%%) fixed no-repeat center center
+    }
+
+hr {background-color:#ccc; height:1px; border:0;}
+
+/*** CONTENT - LINKS ***/
+.link {
+    margin: 5px 315px 3px 0px;
+    }
+/*.thing .title, .thing .title.click, .thing .title.loggedin, .thing .title.loggedin.click {
+    color: #214B8D;
+    }*/
+/*.thing .title:visited, .thing .title.click:visited, .thing .title.loggedin:visited, .thing .title.loggedin.click:visited {
+    color: #555555;
+    }*/
+/*.thing .title:hover, .thing .title.click:hover, .thing .title.loggedin:hover, .thing .title.loggedin.click:hover {
+    color: #99c;
+    }*/
+.thing.spam {
+    background-color: #EEE0DE
+    }
+.midcol {
+    /*padding: 0px 8px 0 8px;*/
+    width: auto !important
+    }
+.click-gadget div .reddit-link .midcol {
+    padding: 0 20px 0 0
+    }
+/*** END CONTENT - LINKS ***/
+
+
+/*** HIGHLIGHT DOMAIN TAGS ***/ /*inspired by r-baconreader*/
+span.domain {
+    font-size: 0
+    }
+span.domain a {
+    border-radius: 2px;
+    background:#f5f5f5; 
+    border:1px solid #ddd;
+    color: #999;
+    font-size: 9px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0px 4px;
+    }
+span.domain a:hover {
+    background:#f5f5f5; 
+    border:1px solid #ddd;
+    color: #000;
+    text-decoration: none;
+    }
+/* Disabling background and styling promoted-links */
+.link.promotedlink.promoted {
+    background-color: transparent
+    }
+.link.promotedlink {
+    border-radius: 8px;
+    border: 1px solid #DDDDDD
+    }
+/*** END HIGHLIGHT DOMAIN TAGS ***/
+
+
+/*** THREAD STYLING ***/
+
+/* RMT thread styling */
+a[href*="/rmt"].title:link {color: #669966;}
+a[href*="/rmt"].title:visited {color: #669966 !important;}
+/* End RMT thread styling */
+
+
+/* Waiver wire thread styling */
+a[href*= "/waiver"].title:link {color: #8800bb;}
+a[href*= "/drop"].title:link {color: #8800bb;}
+/* End Waiver wire thread styling */
+
+/* Keeper thread styling */
+a[href*= "/keeper"].title:link {color: #ff9933;}
+/* End Keeper thread styling */
+
+/* Brag thread styling */
+a[href*= "/brag"].title:link {color: #4488ff;}
+/* End Brag thread styling */
+
+/*** END THREAD STYLING ***/
+
+/*** MOD POST ***/
+.linkflair-modpost {background:#c6f1c6; border:1px solid #196419;}
+/*** END MOD POST ***/
+
+/*** NEWS POST ***/
+.linkflair-newspost {background:#fefec4; border:1px solid #868602;}
+/*** END NEWS POST ***/
+
+/*** QUALITY POST ***/
+.linkflair-qualitypost {background:#c4c4fe; border:1px solid #020286;}
+/*** END QUALITY POST ***/
+
+/*** PLAYER DISCUSSION ***/
+.linkflair-playerdisc {background:#fec4c4; border:1px solid #860202;}
+/*** END PLAYER DISCUSSION POST ***/
+
+/********** END CONTENT & BODY **********/
+
+/*** BEGIN FLAIR ***/
+
+.flair-fantasybro {
+    border:0px;
+    background:url(%%FantasyBro%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-fantasybro { text-indent: -999em; width: 15px; }
+.flair-fantasybro:hover { width: auto; text-indent: 17px; }
+
+.flair-trophy {
+    border:0px;
+    background:url(%%trophy2%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-trophy { text-indent: -999em; width: 12px; }
+.flair-trophy:hover { width: auto; text-indent: 14px; }
+
+.flair-2trophy {
+    border:0px;
+    background:url(%%2trophy%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-2trophy { text-indent: -999em; width: 26px; }
+.flair-2trophy:hover { width: auto; text-indent: 28px; }
+
+.flair-2trophymedal {
+    border:0px;
+    background:url(%%2trophymedal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-2trophymedal { text-indent: -999em; width: 40px; }
+.flair-2trophymedal:hover { width: auto; text-indent: 42px; }
+
+.flair-commish {
+    border:0px;
+    background:url(%%commish%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-commish { text-indent: -999em; width: 12px; }
+.flair-commish:hover { width: auto; text-indent: 14px; }
+
+.flair-trophycommish {
+    border:0px;
+    background:url(%%trophymod%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-trophycommish { text-indent: -999em; width: 26px; }
+.flair-trophycommish:hover { width: auto; text-indent: 28px; }
+
+.flair-celeb {
+    border:0px;
+    background:url(%%star2%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-celeb { text-indent: -999em; width: 12px; }
+.flair-celeb:hover { width: auto; text-indent: 14px; }
+
+.flair-champ {
+    border:0px;
+    background:url(%%crown2%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-champ { text-indent: -999em; width: 12px; }
+.flair-champ:hover { width: auto; text-indent: 14px; }
+
+.flair-medal {
+    border:0px;
+    background:url(%%medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-medal { text-indent: -999em; width: 12px; }
+.flair-medal:hover { width: auto; text-indent: 14px; }
+
+.flair-2medal {
+    border:0px;
+    background:url(%%2medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-2medal { text-indent: -999em; width: 26px; }
+.flair-2medal:hover { width: auto; text-indent: 28px; }
+
+.flair-3medal {
+    border:0px;
+    background:url(%%3medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-3medal { text-indent: -999em; width: 40px; }
+.flair-3medal:hover { width: auto; text-indent: 42px; }
+
+.flair-4medal {
+    border:0px;
+    background:url(%%4medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-4medal { text-indent: -999em; width: 54px; }
+.flair-4medal:hover { width: auto; text-indent: 56px; }
+
+.flair-medalcommish {
+    border:0px;
+    background:url(%%medalcommish%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-medalcommish { text-indent: -999em; width: 26px; }
+.flair-medalcommish:hover { width: auto; text-indent: 28px; }
+
+.flair-trophymedal {
+    border:0px;
+    background:url(%%trophymedal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-trophymedal { text-indent: -999em; width: 26px; }
+.flair-trophymedal:hover { width: auto; text-indent: 28px; }
+
+.flair-trophy2medal {
+    border:0px;
+    background:url(%%trophy2medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-trophy2medal { text-indent: -999em; width: 40px; }
+.flair-trophy2medal:hover { width: auto; text-indent: 42px; }
+
+.flair-trophy3medal {
+    border:0px;
+    background:url(%%trophy3medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-trophy3medal { text-indent: -999em; width: 54px; }
+.flair-trophy3medal:hover { width: auto; text-indent: 56px; }
+
+.flair-trophy4medal {
+    border:0px;
+    background:url(%%trophy4medal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-trophy4medal { text-indent: -999em; width: 68px; }
+.flair-trophy4medal:hover { width: auto; text-indent: 70px; }
+
+.flair-brotrophy {
+    border:0px;
+    background:url(%%brotrophy%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-brotrophy { text-indent: -999em; width: 29px; }
+.flair-brotrophy:hover { width: auto; text-indent: 31px; }
+
+
+.flair-bromedal {
+    border:0px;
+    background:url(%%bromedal%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-bromedal { text-indent: -999em; width: 29px; }
+.flair-bromedal:hover { width: auto; text-indent: 31px; }
+
+
+.flair-beergod {
+    border:0px;
+    background:url(%%beergod%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-beergod { text-indent: -999em; width: 32px; }
+.flair-beergod:hover { width: auto; text-indent: 34px; }
+
+.flair-poop {
+    border:0px;
+    background:url(%%poop2%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-poop { text-indent: -999em; width: 12px; }
+.flair-poop:hover { width: auto; text-indent: 14px; }
+
+.flair-fedora {
+    border:0px;
+    background:url(%%fedora%%) no-repeat transparent;
+    font-size:9px;
+    height:12px;
+    overflow: hidden;
+    }
+.flair-fedora { text-indent: -999em; width: 12px; }
+.flair-fedora:hover { width: auto; text-indent: 19px; }
+
+/*** END FLAIR ***/
+
+
+/********** SIDEBAR **********/
+
+/*** TOP IMAGE ***/
+
+body>#header [name='uh']~a:before, body>.side:before {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    content: '';
+    top: 21px;
+    right: 5px;
+}
+
+/* hack to fix RES's take over of the header */
+body.res>#header [name='uh']~a:before, body.res>.side:before {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    content: '';
+    top: 74px;
+    right: 5px;
+}
+
+body>.side:before {
+    top: 93px;
+    z-index: 100;
+}
+
+body>.side { margin-top: 310px; }
+
+ /*36 random images to appear at the top of the sidebar*/ 
+#header [name='uh'][value$='0'] ~ a:before { background-image: url(%%ad-NarFFL%%); }
+#header [name='uh'][value$='1'] ~ a:before { background-image: url(%%choo-choo%%); } 
+#header [name='uh'][value$='2'] ~ a:before { background-image: url(%%Alfred%%); } 
+#header [name='uh'][value$='3'] ~ a:before { background-image: url(%%Rodgers%%); } 
+#header [name='uh'][value$='4'] ~ a:before { background-image: url(%%Charles%%); }
+#header [name='uh'][value$='5'] ~ a:before { background-image: url(%%Megatron%%); } 
+#header [name='uh'][value$='6'] ~ a:before { background-image: url(%%Graham%%); } 
+#header [name='uh'][value$='7'] ~ a:before { background-image: url(%%choo-choo%%); } 
+#header [name='uh'][value$='8'] ~ a:before { background-image: url(%%AJ%%); } 
+#header [name='uh'][value$='9'] ~ a:before { background-image: url(%%AD%%); } 
+#header [name='uh'][value$='a'] ~ a:before { background-image: url(%%Dez%%); } 
+#header [name='uh'][value$='b'] ~ a:before { background-image: url(%%Lynch%%); } 
+#header [name='uh'][value$='c'] ~ a:before { background-image: url(%%ad-NarFFL%%); } 
+#header [name='uh'][value$='d'] ~ a:before { background-image: url(%%ad-flea%%); } 
+#header [name='uh'][value$='e'] ~ a:before { background-image: url(%%ad-FantasyBro%%); } 
+#header [name='uh'][value$='f'] ~ a:before { background-image: url(%%ad-DraftDay%%); } 
+
+/*** END TOP IMAGE ***/
+
+/*** SIDEBAR - SEARCH ***/
+#search input[type="text"] {
+    width: 275px !important;
+    color:#ccc;
+    background-color:#efefef;
+    background:url(%%magglass%%);
+    background-repeat:no-repeat;
+    background-position:5px;
+    padding: 5px 0px 5px 25px;
+    border-color:#ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px
+    }
+/*** END SIDEBAR - SEARCH ***/
+
+
+/*** REMOVE DIV UNDER SUBMIT BUTTON ***/
+.sidebox.submit .spacer { display: none }
+/*** END REMOVE DIV UNDER SUBMIT BUTTON ***/
+
+/*** CUSTOM TEXT UNDERNEATH THE SUBMIT BUTTONS ***/
+div.sidebox.submit-text:after
+{
+    display: block;
+    font-size: 11px;
+    content: "Please read the Posting Rules & Guidelines in the sidebar before submitting.";
+    margin-top:10px;
+    /*padding-left:10px;*/
+    padding:10px 10px 10px 40px;
+    color:#ff0000;
+    background-color:#ffffc4;
+    border:1px solid #d8d800;
+    border-radius:2px;
+    background-image:url('%%warning%%'); 
+    background-repeat:no-repeat;
+    background-position:left; 
+    }
+/*** CUSTOM TEXT UNDERNEATH THE SUBMIT BUTTONS ***/
+
+
+
+/*** SIDEBAR - TOP CONTENT ***/
+.leavemoderator {
+    background-color:transparent !important;
+    }
+.leavecontributor-button {
+    background-color:transparent !important;
+    }
+.flairtoggle{
+    background-color:transparent !important;
+    }
+/*** END SIDEBAR - TOP CONTENT ***/
+
+
+/*** SIDEBAR - STYLING & HEADERS ***/  /*Special thanks to hero0fwar for his headers styling*/
+.titlebox {
+    padding: 10px;
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    background-image: url(%%GrainBG-grey%%);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    }
+.titlebox .bottom {
+    border: 0
+    }
+.titlebox form.toggle {
+    background-color: transparent
+    }
+.titlebox .usertext {
+    margin: 15px 0;
+    line-height: 120%;
+    font-size: small
+    }
+.titlebox .usertext .md {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    }
+.titlebox .usertext .md h2 {
+    font-size: .8em;
+    font-weight: normal;
+    color: #000;
+    padding-bottom:3px;
+    }
+.titlebox .usertext .md h3 {
+    font-size: .8em;
+    font-weight: normal;
+    color: #000;
+    padding-bottom:3px;
+    padding-left:10px;
+    }
+.titlebox .usertext .md > h1 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #214B8D;
+    color: #fff;
+    font-size:16px;
+    font-weight:bold;
+    padding: 5px 10px;
+    padding-left: 20px;
+    padding-right: 0;
+    margin-right: 13px;
+    margin-left: -18px;
+    border-bottom: 1px solid #214B8D;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    z-index: 100;
+    -moz-box-shadow: 1px 1px 3px #aaa;
+    -webkit-box-shadow: 1px 1px 3px #aaa;
+    }
+.titlebox .usertext .md > h1:after {
+    display: block;
+    content: "";
+    /* DIAGONAL PIECE ON LEFT SIDE */
+    border-color: transparent gray transparent transparent;
+    border-style: solid;
+    border-width: 15px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    margin-left: -35px;
+    margin-top: -10px;
+    }
+
+.titlebox .usertext .md > h4 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #ff9933;
+    color: #fff;
+    font-size:16px;
+    font-weight:bold;
+    padding: 5px 10px;
+    padding-left: 20px;
+    padding-right: 0;
+    margin-right: 13px;
+    margin-left: -18px;
+    border-bottom: 1px solid #ff9933;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    z-index: 100;
+    -moz-box-shadow: 1px 1px 3px #aaa;
+    -webkit-box-shadow: 1px 1px 3px #aaa;
+    }
+.titlebox .usertext .md > h4:after {
+    display: block;
+    content: "";
+    /* DIAGONAL PIECE ON LEFT SIDE */
+    border-color: transparent gray transparent transparent;
+    border-style: solid;
+    border-width: 15px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    margin-left: -35px;
+    margin-top: -10px;
+    }
+
+/*** END SIDEBAR - STYLING & HEADERS ***/
+
+
+/*** SIDEBAR - BOTTOM CONTENT ***/
+.sidecontentbox .content {
+    background-color: #FFF;
+    background-image: url(%%GrainBG-grey%%);
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    }
+.sidecontentbox a.helplink {
+    margin-right: 3px;
+    }
+.sidecontentbox h1 {
+    margin-bottom: 2px;
+    margin-left: 5px
+    }
+.icon-menu a {
+    text-transform: capitalize;
+    background-color: transparent
+    }
+.sidebox .spacer {
+    background: transparent
+    }
+.morelink {
+    border-radius: 3px
+    }
+.morelink .nub {
+    background: transparent !important;
+    display: none !important
+    }
+/*** END SIDEBAR - BOTTOM CONTENT ***/
+
+
+
+/********** END SIDEBAR **********/
+
+
+/********** MISC STYLE **********/
+
+/*** CUSTOM TEXT ON THE SUBMIT PAGE ***/
+#link-desc:after, #text-desc:after {
+    display: block;
+    margin: 20px 0px 5px;
+    font-weight: bold;
+    font-size:16px;
+    content: "Did you read the Rules & Guidelines on the sidebar? ";
+    color:red;
+    padding:10px 10px 10px 40px;
+    background-color:#fff;
+    border:1px solid #ffa500;
+    background-image:url('%%warning%%'); 
+    background-repeat:no-repeat;
+    background-position:left; 
+    }
+/*** END CUSTOM TEXT ON THE SUBMIT PAGE ***/
+
+
+/*** REPLACE "readers" WITH SOMETHING ELSE ***/  /** CURRENTLY OFF **/
+/*div.titlebox span.word {
+    display: none;
+    }*/
+/*div.titlebox span.number:after {
+    content: " owners"
+    }*/
+/*** END REPLACE "readers" WITH SOMETHING ELSE ***/
+
+/********* END MISC STYLE *********/
+
+
+/* Talk Only */
+html[lang="to"] .thing.link {
+    display: none
+    }
+html[lang="to"] .thing.self {
+    display: block
+    }
+/* Links Only */
+html[lang="lo"] .thing.self {
+    display: none
+}   
+
+
+
+/* Downvote arrow less noticeable  */
+.arrow.down {
+    background-image: url(%%poop%%);
+    background-position: 0px -616px;
+    background-repeat: no-repeat;
+}
+
+/* report button */
+.arrow.down:hover:after {
+    position: absolute;
+    white-space: normal;
+    display: block;
+    z-index: 1000;
+    width: 250px;
+    padding: 5px;
+    border: 0px solid #000;
+    background: #cee3f8;
+    content: "Use sparingly. This isn't a disagree button.";
+    text-align: center;
+    font-size: 10px;
+    color: #000;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+
+/* report button */
+
+.report-button:hover:after {
+    position: absolute;
+    white-space: normal;
+    display: block;
+    z-index: 1000;
+    width: 350px;
+    padding: 5px;
+    border: 0px solid #000;
+    background: #cee3f8;
+    content: "Please only report duplicate posts or posts that expicitly violate our Rules and Guidelines.";
+    text-align: center;
+    font-size: 10px;
+    color: #000;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+div.commentarea .report-button:hover:after {
+    position: absolute;
+    white-space: normal;
+    display: block;
+    z-index: 1000;
+    width: 350px;
+    padding: 5px;
+    border: 0px solid #000;
+    background: #cee3f8;
+    content: "Please only report comments that explicitly violate the Rules and Guidelines listed in the wiki.";
+    text-align: center;
+    font-size: 10px;
+    color: #000;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 5px;
+}  
+
+
+/*
+
+/*5C*/
+ /*Special colors for sidebar*/
+a[href^="#"] + em { font-style: normal } /* override default italics */
+ /* Sidebar text formatting - specific fonts */
+a[href^="#gold"] + em { 
+    color: #ff6500;
+    font-weight: 900;
+}
+
+.usertext h6 {
+    margin-top: 0.5em;
+    color: #333;
+    font-size: 1.4em;
+}
