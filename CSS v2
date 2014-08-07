@@ -1,8 +1,34 @@
-dharasick
-=========
-/*********** CSS by dharasick and barroomhero 07.15.2014 ************************/
-/*********** old stylesheet: http://pastebin.com/xPmmr4iY *********/
+/*                                                                                                 
+                                   ///////     FFFFFFFFFFFFFFFFFFFFFF  FFFFFFFFFFFFFFFFFFFFFF
+                                  /:::::/      F::::::::::::::::::::F  F::::::::::::::::::::F
+                                 /:::::/       F::::::::::::::::::::F  F::::::::::::::::::::F
+                                /:::::/        FF::::::FFFFFFFFF::::F  FF::::::FFFFFFFFF::::F
+rrrrr   rrrrrrrrr              /:::::/           F:::::F       FFFFFF    F:::::F       FFFFFF
+r::::rrr:::::::::r            /:::::/            F:::::F                 F:::::F             
+r:::::::::::::::::r          /:::::/             F::::::FFFFFFFFFF       F::::::FFFFFFFFFF   
+rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F:::::::::::::::F   
+ r:::::r     r:::::r       /:::::/               F:::::::::::::::F       F:::::::::::::::F   
+ r:::::r     rrrrrrr      /:::::/                F::::::FFFFFFFFFF       F::::::FFFFFFFFFF   
+ r:::::r                 /:::::/                 F:::::F                 F:::::F             
+ r:::::r                /:::::/                  F:::::F                 F:::::F             
+ r:::::r               /:::::/                 FF:::::::FF             FF:::::::FF           
+ r:::::r              /:::::/                  F::::::::FF             F::::::::FF           
+ r:::::r             /:::::/                   F::::::::FF             F::::::::FF           
+ rrrrrrr            ///////                    FFFFFFFFFFF             FFFFFFFFFFF   
 
+
+
+                                 r/FantasyFootball CSS
+
+                                     by dharasick 
+                              with help from barroomhero
+                        and stolen elements from dozens of subs
+                                Last updated: 8/06/2014
+
+                     old stylesheet: http://pastebin.com/xPmmr4iY
+
+
+*/
 
 /*TABLE OF CONTENTS*/
 
@@ -15,7 +41,7 @@ dharasick
       IV.  IMAGE
       V.   LOGO
    E. TOP NAVIGATION BAR
-   F. PAGENAME INTO "r/FF"
+   F. PAGENAME INTO "/r/FF"
    G. MENU BAR
    H. USER NOTIFICATION BAR
 
@@ -28,6 +54,7 @@ dharasick
    F. COMMENT BAR
    G. REMOVES RES SELECTION
    H. SLIDE IN SELF POSTS
+   I. INDEX STYLING
 
 3. FLAIR
    A. USER FLAIR
@@ -55,23 +82,18 @@ dharasick
    B. SEARCH PAGE ADJUSTMENTS
    C. SUBMIT PAGE ADJUSTMENTS
 
-
 7. MISCELLANEOUS STYLING
    CUSTOM TEXT ON THE SUBMIT PAGE
    A. REPLACE "readers" WITH SOMETHING ELSE
    B. DOWNVOTE ARROW LESS NOTICEABLE
    C. DOWNVOTE MESSAGE
-   D. REPORT MESSAGE
+   D. REPORT MESSAGES
    E. SPECIAL COLORS
    F. FOOTBALL UPVOTES
    G. TABLE STYLING
    H. MESSAGE THE MODERATORS
    I. DISTINGUISHED POSTS MOAR DISTINGUISHED
-
-
-
-
-
+   J. REPORT BUTTON
 
 
 
@@ -95,7 +117,6 @@ body{
     margin-bottom: 2px!important;
     border-bottom: 3px solid #c2d6e9!important;
 }
-
 
 /*BOTTOM BORDER*/
 #header{
@@ -170,7 +191,7 @@ a#header-img.default-header{
 }
 
 
-/*PAGENAME INTO "r/FF"*/
+/*PAGENAME INTO "/r/FF"*/
 .pagename a{
     font-size:0;content:"";
     overflow:hidden;text-indent:-300px;
@@ -393,6 +414,7 @@ a[href*= "/brag"].title:link {color: #4488ff;}
 
 
 /*COMMENT BAR*/
+.comment .buttons .report-button a { color: #CF5555 !important; }
 ul.flat-list.buttons a {color: #000000;}
 
 
@@ -404,45 +426,32 @@ ul.flat-list.buttons a {color: #000000;}
 /*SLIDE IN SELF POSTS*/
 .self .entry {
     background: hsl(0, 0%, 100%);
-
-    z-index: 10000;
 }
 .comments-page .self .entry {
     position: static;
-
-    z-index: 10000;
 }
 .self .expando-button ~ .expando {
     display: block!important;
     max-height: 0;
     margin: 0;
     overflow: hidden;
-
-    z-index: 10000;
 }
 .self .expando-button ~ .expando .usertext {
     position: relative;
     overflow: hidden;
     display: none;
-
-    z-index: 10000;
 }
 .self .expanded ~ .expando .usertext {
     display: block;
-
-    z-index: 10000;
 }
 .self .expanded ~ .expando {
     max-height: none;
     margin: .5em 0;
     overflow: visible;
-    z-index: 10000;
 }
 .self .expando-button ~ .expando .usertext-body {
     position: relative;
     top: -100px;
-
-    z-index: 10000;
 }
 .self .expanded ~ .expando .usertext-body {
     -webkit-animation: 300ms exp forwards;
@@ -464,7 +473,20 @@ ul.flat-list.buttons a {color: #000000;}
     50%  { top: 0; }
     100% { top: 0; opacity: 1; }
 }
-/*END SLIDE-IN SELF POSTS*/
+
+
+/*INDEX STYLING*/
+/*IMAGE IN INDEX COMMENT BOX*/
+body.post-linkflair-index .commentarea>.usertext  textarea:not(:focus){
+background-image: url(%%Untitled%%);
+background-repeat: no-repeat;
+}
+/*HEADERS FOR INDEX POST*/
+.usertext h6 {
+    margin-top: 0.5em;
+    color: #333;
+    font-size: 1.4em;
+}
 
 
 /********** END POST STYLING **********/
@@ -475,7 +497,7 @@ ul.flat-list.buttons a {color: #000000;}
 
 /*** BEGIN FLAIR ***/
 
-
+/*USER FLAIR*/
 .flairselector .customizer {
 display: none !important;
 }
@@ -491,74 +513,70 @@ display: none !important;
 .flair-2trophymedal{ background-position: 0 -124px; width: 40px; height: 12px; } 
 .flair-3medal{ background-position: 0 -186px; width: 40px; height: 12px; } 
 .flair-4medal{ background-position: 0 -248px; width: 54px; height: 12px; } 
-.flair-FantasyBro{ background-position: 0 -310px; width: 15px; height: 12px; } 
 .flair-beergod{ background-position: 0 -372px; width: 32px; height: 12px; } 
 .flair-bromedal{ background-position: 0 -434px; width: 29px; height: 12px; } 
 .flair-brotrophy{ background-position: 0 -496px; width: 29px; height: 12px; } 
+.flair-celeb{ background-position: 0 -933px; width: 12px; height: 12px; } 
+.flair-champ{ background-position: 0 -620px; width: 15px; height: 15px; } 
 .flair-commish{ background-position: 0 -558px; width: 12px; height: 12px; } 
-.flair-crown{ background-position: 0 -620px; width: 15px; height: 15px; } 
+.flair-fantasybro{ background-position: 0 -310px; width: 15px; height: 12px; } 
 .flair-fedora{ background-position: 0 -685px; width: 17px; height: 12px; } 
 .flair-medal{ background-position: 0 -747px; width: 12px; height: 12px; } 
 .flair-medalcommish{ background-position: 0 -809px; width: 26px; height: 12px; } 
 .flair-poop{ background-position: 0 -871px; width: 15px; height: 12px; } 
-.flair-star{ background-position: 0 -933px; width: 12px; height: 12px; } 
-.flair-trophy2{ background-position: 0 -995px; width: 12px; height: 12px; } 
+.flair-trophy{ background-position: 0 -995px; width: 12px; height: 12px; } 
 .flair-trophy2medal{ background-position: 0 -1057px; width: 40px; height: 12px; } 
 .flair-trophy3medal{ background-position: 0 -1119px; width: 54px; height: 12px; } 
 .flair-trophy4medal{ background-position: 0 -1181px; width: 68px; height: 12px; } 
+.flair-trophycommish{ background-position: 0 -1305px; width: 26px; height: 12px; }
 .flair-trophymedal{ background-position: 0 -1243px; width: 26px; height: 12px; } 
-.flair-trophymod{ background-position: 0 -1305px; width: 26px; height: 12px; } 
 
 
 /*CUSTOM HOVER INDENTS*/
-.flair-2trophy { text-indent: -999em; width: 26px; }
-.flair-2trophy:hover { width: auto; text-indent: 28px; }
-.flair-fantasybro { text-indent: -999em; width: 15px; }
-.flair-fantasybro:hover { width: auto; text-indent: 17px; }
-.flair-trophy { text-indent: -999em; width: 12px; }
-.flair-trophy:hover { width: auto; text-indent: 14px; }
-.flair-2trophy { text-indent: -999em; width: 26px; }
-.flair-2trophy:hover { width: auto; text-indent: 28px; }
-.flair-2trophymedal { text-indent: -999em; width: 40px; }
-.flair-2trophymedal:hover { width: auto; text-indent: 42px; }
-.flair-2trophymedal { text-indent: -999em; width: 40px; }
-.flair-2trophymedal:hover { width: auto; text-indent: 42px; }
-.flair-commish { text-indent: -999em; width: 12px; }
-.flair-commish:hover { width: auto; text-indent: 14px; }
-.flair-trophycommish { text-indent: -999em; width: 26px; }
-.flair-trophycommish:hover { width: auto; text-indent: 28px; }
-.flair-celeb { text-indent: -999em; width: 12px; }
-.flair-celeb:hover { width: auto; text-indent: 14px; }
-.flair-champ { text-indent: -999em; width: 12px; }
-.flair-champ:hover { width: auto; text-indent: 14px; }
-.flair-medal { text-indent: -999em; width: 12px; }
-.flair-medal:hover { width: auto; text-indent: 14px; }
 .flair-2medal { text-indent: -999em; width: 26px; }
 .flair-2medal:hover { width: auto; text-indent: 28px; }
+.flair-2trophy { text-indent: -999em; width: 26px; }
+.flair-2trophy:hover { width: auto; text-indent: 28px; }
+.flair-2trophymedal { text-indent: -999em; width: 40px; }
+.flair-2trophymedal:hover { width: auto; text-indent: 42px; }
 .flair-3medal { text-indent: -999em; width: 40px; }
 .flair-3medal:hover { width: auto; text-indent: 42px; }
 .flair-4medal { text-indent: -999em; width: 68px; }
 .flair-4medal:hover { width: auto; text-indent: 70px; }
+.flair-beergod { text-indent: -999em; width: 32px; }
+.flair-beergod:hover { width: auto; text-indent: 34px; }
+.flair-bromedal { text-indent: -999em; width: 29px; }
+.flair-bromedal:hover { width: auto; text-indent: 31px; }
+.flair-brotrophy { text-indent: -999em; width: 29px; }
+.flair-brotrophy:hover { width: auto; text-indent: 31px; }
+.flair-celeb { text-indent: -999em; width: 12px; }
+.flair-celeb:hover { width: auto; text-indent: 14px; }
+.flair-champ { text-indent: -999em; width: 12px; }
+.flair-champ:hover { width: auto; text-indent: 14px; }
+.flair-commish { text-indent: -999em; width: 12px; }
+.flair-commish:hover { width: auto; text-indent: 14px; }
+.flair-fantasybro { text-indent: -999em; width: 15px; }
+.flair-fantasybro:hover { width: auto; text-indent: 17px; }
+.flair-fedora { text-indent: -999em; width: 16px; }
+.flair-fedora:hover { width: auto; text-indent: 19px; }
+.flair-medal { text-indent: -999em; width: 12px; }
+.flair-medal:hover { width: auto; text-indent: 14px; }
 .flair-medalcommish { text-indent: -999em; width: 26px; }
 .flair-medalcommish:hover { width: auto; text-indent: 28px; }
-.flair-trophymedal { text-indent: -999em; width: 26px; }
-.flair-trophymedal:hover { width: auto; text-indent: 28px; }
+.flair-poop { text-indent: -999em; width: 17px; }
+.flair-poop:hover { width: auto; text-indent: 19px; }
+.flair-trophy { text-indent: -999em; width: 12px; }
+.flair-trophy:hover { width: auto; text-indent: 14px; }
 .flair-trophy2medal { text-indent: -999em; width: 40px; }
 .flair-trophy2medal:hover { width: auto; text-indent: 42px; }
 .flair-trophy3medal { text-indent: -999em; width: 54px; }
 .flair-trophy3medal:hover { width: auto; text-indent: 56px; }
 .flair-trophy4medal { text-indent: -999em; width: 68px; }
 .flair-trophy4medal:hover { width: auto; text-indent: 70px; }
-.flair-brotrophy { text-indent: -999em; width: 29px; }
-.flair-brotrophy:hover { width: auto; text-indent: 31px; }
-.flair-bromedal { text-indent: -999em; width: 29px; }
-.flair-bromedal:hover { width: auto; text-indent: 31px; }
-.flair-beergod { text-indent: -999em; width: 32px; }
-.flair-beergod:hover { width: auto; text-indent: 34px; }
-.flair-poop { text-indent: -999em; width: 17px; }
-.flair-poop:hover { width: auto; text-indent: 19px; }
-.flair-fedora { text-indent: -999em; width: 16px; }
-.flair-fedora:hover { width: auto; text-indent: 19px; }
+.flair-trophycommish { text-indent: -999em; width: 26px; }
+.flair-trophycommish:hover { width: auto; text-indent: 28px; }
+.flair-trophymedal { text-indent: -999em; width: 26px; }
+.flair-trophymedal:hover { width: auto; text-indent: 28px; }
 
 
 /*Link Flair*/
@@ -595,24 +613,38 @@ display: none !important;
 }
 
 /*MOD POST*/ /**Green**/
-.linkflair-modpost:hover{background-color:#ebf9f0!important;}
+.linkflair-modpost:hover{background-color:#ebf9f0!important;background:url(%%modpost-New%%) repeat #c7fcda!important;}
 .linkflair-modpost div.entry p .linkflairlabel{border-left:#39bf69 solid 5px !important;}
 .linkflair-modpost div.entry p .linkflairlabel:hover{background-color:#ebf9f0; opacity:0.8; text-shadow: 0px 0px 5px #39bf69;}
 
+/*DAILY POST*/ /**Yellow**/
+.linkflair-daily:hover{background-color:#ebf9f0!important;background:url(%%Daily-New%%) repeat #FFFFD8!important;}
+.linkflair-daily div.entry p .linkflairlabel{border-left:#FFD500 solid 5px !important;}
+.linkflair-daily div.entry p .linkflairlabel:hover{background-color:#ebf9f0; opacity:0.8; text-shadow: 0px 0px 5px #FFD500;}
+
+/*INDEX POST*/ /**Yellow**/
+.linkflair-index:hover{background-color:#ebf9f0!important;background:url(%%Index-New%%) repeat #FFFFD8!important;}
+.linkflair-index div.entry p .linkflairlabel{border-left:#FFD500 solid 5px !important;}
+.linkflair-index div.entry p .linkflairlabel:hover{background-color:#ebf9f0; opacity:0.8; text-shadow: 0px 0px 5px #FFD500;}
+
 /*QUALITY POST*/ /**Blue**/
-.linkflair-qualitypost:hover{background-color:#e4f0f9!important;}
+.linkflair-qualitypost:hover{background-color:#e4f0f9!important;background:url(%%Quality-New%%) repeat #c4e3f9!important;}
 .linkflair-qualitypost div.entry p .linkflairlabel{border-left:#308acf solid 5px !important;}
 .linkflair-qualitypost div.entry p .linkflairlabel:hover{background-color:#e4f0f9; opacity:0.8; text-shadow: 0px 0px 5px #308acf;}
 
 /*PLAYER POST*/ /**Purple**/
-.linkflair-playerdisc:hover{background-color:#f4eef7!important;}
+.linkflair-playerdisc:hover{background-color:#f4eef7!important;background:url(%%Player-New%%) repeat #eedcf7 !important;}
 .linkflair-playerdisc div.entry p .linkflairlabel{border-left:#995AB3 solid 5px !important;}
 .linkflair-playerdisc div.entry p .linkflairlabel:hover{background-color:#f4eef7; opacity:0.8; text-shadow: 0px 0px 5px #995AB3;}
 
 /*BREAKING NEWS*/ /**Orange**/
-.linkflair-newspost:hover{background-color:#faeadf!important; background:url(%%BreakingNewsBG%%) repeat #f8dfce !important;}
+.linkflair-newspost:hover{background-color:#faeadf!important; background:url(%%Breaking-New%%) repeat #f8dfce !important;}
 .linkflair-newspost div.entry p .linkflairlabel{border-left:#E27D33 solid 5px !important;}
 .linkflair-newspost div.entry p .linkflairlabel:hover{background-color:#faeadf; opacity:0.8; text-shadow: 0px 0px 5px #E27D33;}
+
+/*MISLEADING*/ /**Gray**/
+.linkflair-misleading div.entry p .linkflairlabel{border-left:#999999 solid 5px !important;}
+.linkflair-misleading div.entry p .linkflairlabel:hover{background-color:#CCCCCC; opacity:0.8; text-shadow: 0px 0px 5px #EBEBEB;}
 
 
 /*STICKY POST*/
@@ -622,6 +654,7 @@ display: none !important;
 .stickied-tagline {
     color:red!important;
 }
+
 
 
 /*** END FLAIR ***/
@@ -669,10 +702,10 @@ body>.side { margin-top: 310px; } /*MOVES ENTIRE SIDEBAR DOWN*/
 #header [name='uh'][value$='8'] ~ a:before { background-image: url(%%julio%%); } 
 #header [name='uh'][value$='9'] ~ a:before { background-image: url(%%lacy%%); } 
 #header [name='uh'][value$='a'] ~ a:before { background-image: url(%%mccoy%%); } 
-/*#header [name='uh'][value$='c'] ~ a:before { background-image: url(%%megatron%%);}*/ 
-/*#header [name='uh'][value$='d'] ~ a:before { background-image: url(%%peyton%%); }*/
-/*#header [name='uh'][value$='e'] ~ a:before { background-image: url(%%rodgers%%); }*/
-/*#header [name='uh'][value$='f'] ~ a:before { background-image: url(%%stacy%%); }*/
+#header [name='uh'][value$='c'] ~ a:before { background-image: url(%%megatron%%);}
+#header [name='uh'][value$='d'] ~ a:before { background-image: url(%%megatron2%%); }
+#header [name='uh'][value$='e'] ~ a:before { background-image: url(%%megatron%%); } /*RODGERS*/
+#header [name='uh'][value$='f'] ~ a:before { background-image: url(%%megatron2%%); } /*STACY*/
 
  
 /*image for logged out users*/
@@ -704,7 +737,7 @@ body>.side { margin-top: 310px; } /*MOVES ENTIRE SIDEBAR DOWN*/
 div.sidebox.submit-text:after {
     display: block;
     font-size: 11px;
-    content: "Please read the Posting Rules & Guidelines in the sidebar before submitting.";
+    content: "Please read the Posting Rules in the sidebar before submitting.";
     margin-top:10px;
     /*padding-left:10px;*/
     padding:10px 10px 10px 40px;
@@ -1023,63 +1056,75 @@ div.sidebox.submit-text:after {
 /**********FILTERING SYSTEM**********/
 
 
-/* Talk Only */
+/* SELF POSTS ONLY */
+.side a[href*='#to'] { 
+    width: 271px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    border: 2px solid black;
+    font-size: 100%;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    background: #1D486A;}
 html[lang="to"] .thing.link {
     display: none
     }
 html[lang="to"] .thing.self {
     display: block
     }
-/* Links Only */
+
+/* LINKS ONLY*/
+.side a[href*='#lo'] { 
+    width: 271px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    border: 2px solid black;
+    font-size: 100%;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    background: #1D486A;}
 html[lang="lo"] .thing.self {
     display: none
 }   
 
-
-.side a[href*='#mo'] { 
+/*NO DAILY POSTS*/
+.side a[href*='#do'] { 
+    width: 271px;
+    text-align: center;
     display: inline-block;
     position: relative;
     margin-top:0px;
     border: 2px solid black;
     font-size: 100%;
-    padding: px;
-    color: black;
+    padding: 2px;
+    color: white;
     font-weight: bold;
-    background: #add5ab;}
-html:lang(mo) .linkflair-modpost{
+    background: #1D486A;}
+html:lang(do) .linkflair-daily{
     display: none
     }
 
-.side a[href*='#ne'] { 
+/*ONLY NEWS POSTS NI = NEWS IN */
+.side a[href*='#ni'] { 
+    width: 271px;
+    text-align: center;
     display: inline-block;
     position: relative;
     margin-top:0px;
     border: 2px solid black;
     font-size: 100%;
-    padding: 3px;
-    color: black;
+    padding: 2px;
+    color: white;
     font-weight: bold;
-    background: #add5ab;}
-html:lang(ne) .linkflair-newspost{
-    display: none
-    }
-
-.side a[href*='#mn'] { 
-    display: inline-block;
-    position: relative;
-    margin-top:0px;
-    border: 2px solid black;
-    font-size: 100%;
-    padding: 3px;
-    color: black;
-    font-weight: bold;
-    background: #add5ab;}
-html:lang(mn) .linkflair-modpost{
-    display: none
-    }
-html:lang(mn) .linkflair-newspost{
-    display: none
-    }
+    background: #1D486A;}
+html:lang(ni) .link:not(.linkflair-newspost) {
+display: none}
 
 
 /**********END FILTERING SYSTEM**********/
@@ -1087,7 +1132,7 @@ html:lang(mn) .linkflair-newspost{
 
 /********* BEGIN OTHER PAGE STYLING *********/
 
-
+/* WIKI STYLING */
 .wiki-page .tabmenu li a {
     color: #5F4444 !important;
     font: normal 14px/34px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
@@ -1149,16 +1194,19 @@ html:lang(mn) .linkflair-newspost{
     -webkit-border-radius: 10px;
     color: #fff;
     padding: 3px 50px 3px 10px;
-background: rgb(29,72,106);
-background: -moz-linear-gradient(left, rgba(29,72,106,1) 38%, rgba(74,109,136,1) 100%);
-background: -webkit-linear-gradient(left, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
-background: -o-linear-gradient(left, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
-background: -ms-linear-gradient(left, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
-background: linear-gradient(to right, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
+    background: rgb(29,72,106);
+    background: -moz-linear-gradient(left, rgba(29,72,106,1) 38%, rgba(74,109,136,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
+    background: -o-linear-gradient(left, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
+    background: -ms-linear-gradient(left, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
+    background: linear-gradient(to right, rgba(29,72,106,1) 38%,rgba(74,109,136,1) 100%);
+
 }
 
 /* 3 #'S GETS 150% FONT - NO GRADIENT - USE FOR LINKS */
-.wiki-page .wiki-page-content .md.wiki h3 {font-size: 1.5em;}
+.wiki-page .wiki-page-content .md.wiki h3 {
+    font-size: 1.5em;
+}
 
 /* 4 #'S GETS 130% FONT - ALT HEADER 1 */
 /*.wiki-page .wiki-page-content .md.wiki h4 {font-size: 1.3em;}*/
@@ -1253,17 +1301,24 @@ wiki-page .wiki-page-content .discussionlink {
 /*SUBMIT PAGE ADJUSTMENTS*/
 /*MENU BAR*/
 .submit-page .tabmenu li.selected a {
-    Padding-bottom: 0px !important;
+    color: #B82A2F !important;
+    border: 3px solid #1D486A !important;
+    vertical-align: middle;
+    background-color: #EFEFEF!important;
+    Padding: 0px 0px 2px 0px !important; 
+}
+.submit-page .tabmenu li.selected a:hover {
+    Padding: 0px 0px 2px 0px !important; 
     color: #B82A2F !important;
     border: 3px solid #1D486A !important;
     vertical-align: middle;
     background-color: #EFEFEF!important;
 }
 .submit-page .tabmenu li a {
-    border: none!important;
     Padding: 0px 0px 2px 0px !important; 
     height: 40px!important;
     max-height: 38px!important;
+    border: 3px #E0E0E0 solid !important;
 }
 .submit-page .tabmenu {
     margin-left: 0px !important;
@@ -1273,6 +1328,13 @@ wiki-page .wiki-page-content .discussionlink {
 }
 .submit-page .tabmenu li a:hover {
     background-color: #FBFBFB;
+    border: 3px #E0E0E0 solid !important;
+    Padding: 0px 0px 2px 0px !important; 
+}
+.formtabs-content {
+    width: 520px;
+    border-top: 4px solid #1D486A !important;
+    padding-top: 10px;
 }
 
 /********* END OTHER PAGE STYLING*********/
@@ -1340,7 +1402,8 @@ wiki-page .wiki-page-content .discussionlink {
 }
 
 
-/*REPORT MESSAGE*/
+/*REPORT MESSAGES*/
+.report-button a { color: #CF5555 !important; }
 .report-button:hover:after {
     position: absolute;
     white-space: normal;
@@ -1375,7 +1438,30 @@ div.commentarea .report-button:hover:after {
     margin-left: 25px;
     margin-top: 5px;
 }  
-
+/*BOTTOM MESSAGE*/
+.report-button > span.option.error:before, .submit-page button.btn:hover:before {
+    position: fixed;
+    font-size: 18pt;
+    border-top: 2px solid #000000;
+    padding: 20px;
+    padding-left: 0px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #4A6D88;
+    background-repeat: no-repeat;
+    background-position: -1px 9px;
+    color: black;
+    font-weight: bold;
+    z-index: 1000
+    }
+.report-button > span.option.error:before {
+    content: "Please message the mods for prompt service."
+    }
+.submit-page button.btn:hover:before {
+    content: "Did you search first?"
+    }
 
 /*SPECIAL COLORS*/
 a[href^="#"] + em { font-style: normal } /* override default italics */
@@ -1385,17 +1471,18 @@ a[href^="#gold"] + em {
     font-weight: 900;
 }
 
-
 /*FOOTBALL UPVOTES*/
-.comment .midcol {
-    width: 25px;
-}
-/*SPACING*/
+/*big shout out to /u/tdvx and /r/redditblack for creating the animation portion*/
 .midcol {
     padding: 0px 5px 0 5px;
 }
-/*CHANGES UNCLICKED UPVOTE*/
-.arrow.up { 
+
+/*Remove the slash and asterisk below to make football upvotes active*/
+
+/*.comment .midcol {
+    width: 25px;
+}
+ .arrow.up { 
     background: url(%%goal%%) no-repeat;
     right: 3px;
     width: 30px;
@@ -1403,7 +1490,6 @@ a[href^="#gold"] + em {
     cursor: url(%%football%%),auto;
     align-content: center;
 }
-/*CHANGES CLICKED UPVOTE*/
 .arrow.upmod { 
     background: url(%%goal%%) no-repeat;
     right: 6px;
@@ -1412,15 +1498,12 @@ a[href^="#gold"] + em {
     cursor: url(%%football%%),auto;
     align-content: center;
 }
-/*CURSOR FOR DOWNVOTE*/
 .arrow.down{ 
     cursor: not-allowed;
 }
-/*CENTERS SCORE*/
 .link .score {
 margin-left: 2px;
 }
-/*IT'S GOOD MESSAGE*/
 .thing .upmod:focus:after {
     content: "it's good!";
     position: absolute;
@@ -1567,7 +1650,7 @@ margin-left: 2px;
         margin-right: -20px;
     }
 }
-
+*/
 
 /*TABLE STLYING*/
 /*Makes tables full width*/
@@ -1652,8 +1735,5 @@ div.side .md table {
 }
 
 
-
-
 /********* END MISC STYLE *********/
-
 
