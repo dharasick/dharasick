@@ -1,4 +1,6 @@
-/*                                                                                                 
+/*  
+
+                                                                                               
                                    ///////     FFFFFFFFFFFFFFFFFFFFFF  FFFFFFFFFFFFFFFFFFFFFF
                                   /:::::/      F::::::::::::::::::::F  F::::::::::::::::::::F
                                  /:::::/       F::::::::::::::::::::F  F::::::::::::::::::::F
@@ -23,9 +25,14 @@ rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F::::::
                                      by dharasick 
                               with help from barroomhero
                         and stolen elements from dozens of subs
-                                Last updated: 8/06/2014
+                                Last updated: 9/29/2014
 
-                     old stylesheet: http://pastebin.com/xPmmr4iY
+                                   old stylesheets:
+                             http://pastebin.com/xPmmr4iY
+                             http://pastebin.com/uA95zwsz 
+
+
+
 
 
 */
@@ -52,9 +59,10 @@ rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F::::::
    D. DOMAIN TAGS
    E. RMT, WW, KEEPER, AND BRAG THREAD STYLING
    F. COMMENT BAR
-   G. REMOVES RES SELECTION
+   G. RES CLEANING
    H. SLIDE IN SELF POSTS
    I. INDEX STYLING
+   J. AD STYLING
 
 3. FLAIR
    A. USER FLAIR
@@ -68,6 +76,7 @@ rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F::::::
 4. SIDEBAR
    A. TOP IMAGE 
    B. SEARCH 
+      I. RESULTS FIX
    C. REMOVE DIV UNDER SUBMIT BUTTON 
    D. CUSTOM TEXT UNDERNEATH THE SUBMIT BUTTONS
    E. FLAIR/MOD/SUBSCRIBER BUTTONS
@@ -81,6 +90,9 @@ rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F::::::
    A. WIKI STYLING
    B. SEARCH PAGE ADJUSTMENTS
    C. SUBMIT PAGE ADJUSTMENTS
+      I.   MENU BAR
+      II.  IMAGE IN TEXT SUBMIT BOX
+      III. RULES STYLING
 
 7. MISCELLANEOUS STYLING
    CUSTOM TEXT ON THE SUBMIT PAGE
@@ -92,10 +104,13 @@ rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F::::::
    F. FOOTBALL UPVOTES
    G. TABLE STYLING
    H. MESSAGE THE MODERATORS
-   I. DISTINGUISHED POSTS MOAR DISTINGUISHED
-   J. REPORT BUTTON
-
-
+   I. SUBSCRIBER EDITS
+   K. TEXT COLORS
+      I.   TEXT COLORS
+      II.  TEAM COLORS
+   L. LIVE THREAD STYLING
+   M. EASTER EGGS
+   N. MODERATOR NOTE
 
 /********** GENERAL PAGE ELEMENTS/STYLING **********/
 
@@ -278,6 +293,7 @@ a#header-img.default-header{
 .tabmenu li:first-child a {
     border-left: 1px #E0E0E0 solid !important;
 }
+/*WIKI TAB RED*/
 .tabmenu li:nth-child(7) a {
     text-decoration: underline;
     color: #B82A2F !important;
@@ -326,6 +342,10 @@ div.content{
 
 /*TITLE COLORS*/
 .link {margin: 5px 315px 3px 0px;}
+
+.content .spacer{
+   margin-bottom:0px !important;
+}
 
 /*.thing .title, .thing .title.click, .thing .title.loggedin, .thing .title.loggedin.click {color: #214B8D;}*/
 
@@ -418,10 +438,17 @@ a[href*= "/brag"].title:link {color: #4488ff;}
 ul.flat-list.buttons a {color: #000000;}
 
 
-/*REMOVES RES SELECTION*/
-.res .RES-keyNav-activeElement, .res .commentarea .RES-keyNav-activeElement .md, .res .commentarea .RES-keyNav-activeElement.entry .noncollapsed, .self .entry  {
+/*RES CLEANING*/
+.res .RES-keyNav-activeElement,
+.res .commentarea .RES-keyNav-activeElement .md,
+.res .commentarea .RES-keyNav-activeElement.entry .noncollapsed ,
+.self .entry {
     background-color: transparent !important;
 }
+.res .RES-keyNav-activeElement {
+    border-right: 1px solid #BFCCD6;
+}
+
 
 /*SLIDE IN SELF POSTS*/
 .self .entry {
@@ -486,6 +513,36 @@ background-repeat: no-repeat;
     margin-top: 0.5em;
     color: #333;
     font-size: 1.4em;
+}
+.usertext h5 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+    font-size: 1.75em;
+}
+.usertext h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+    font-size: 1.3em;
+}
+.usertext h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+    font-size: 1.15em;
+}
+
+/*AD STYLING*/
+div.spacer {
+    margin-bottom: 5px !important;
+}
+.organic-listing {
+    border: 1px solid #808080;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0px !important;
 }
 
 
@@ -691,21 +748,21 @@ body>.side:before {
 }
 body>.side { margin-top: 310px; } /*MOVES ENTIRE SIDEBAR DOWN*/
  /*36 random images to appear at the top of the sidebar*/ 
-#header [name='uh'][value$='0'] ~ a:before { background-image: url(%%allen%%); }
-#header [name='uh'][value$='1'] ~ a:before { background-image: url(%%ball%%); } 
+#header [name='uh'][value$='0'] ~ a:before { background-image: url(%%demarco%%); } 
+#header [name='uh'][value$='1'] ~ a:before { background-image: url(%%ellington%%); } 
 #header [name='uh'][value$='2'] ~ a:before { background-image: url(%%bell%%); } 
 #header [name='uh'][value$='3'] ~ a:before { background-image: url(%%demaryius%%); }
-#header [name='uh'][value$='4'] ~ a:before { background-image: url(%%dez%%); }
-#header [name='uh'][value$='5'] ~ a:before { background-image: url(%%forte%%); } 
+#header [name='uh'][value$='4'] ~ a:before { background-image: url(%%julius%%); }  
+#header [name='uh'][value$='5'] ~ a:before { background-image: url(%%luck%%); }   
 #header [name='uh'][value$='6'] ~ a:before { background-image: url(%%graham%%); } 
 #header [name='uh'][value$='7'] ~ a:before { background-image: url(%%gronk%%); } 
 #header [name='uh'][value$='8'] ~ a:before { background-image: url(%%julio%%); } 
-#header [name='uh'][value$='9'] ~ a:before { background-image: url(%%lacy%%); } 
-#header [name='uh'][value$='a'] ~ a:before { background-image: url(%%mccoy%%); } 
-#header [name='uh'][value$='c'] ~ a:before { background-image: url(%%megatron%%);}
-#header [name='uh'][value$='d'] ~ a:before { background-image: url(%%megatron2%%); }
-#header [name='uh'][value$='e'] ~ a:before { background-image: url(%%megatron%%); } /*RODGERS*/
-#header [name='uh'][value$='f'] ~ a:before { background-image: url(%%megatron2%%); } /*STACY*/
+#header [name='uh'][value$='9'] ~ a:before { background-image: url(%%lynch%%); }   
+#header [name='uh'][value$='a'] ~ a:before { background-image: url(%%maclin%%); }   
+#header [name='uh'][value$='c'] ~ a:before { background-image: url(%%megatron2%%);}
+#header [name='uh'][value$='d'] ~ a:before { background-image: url(%%nelson%%); } 
+#header [name='uh'][value$='e'] ~ a:before { background-image: url(%%adNarFFL%%); } 
+#header [name='uh'][value$='f'] ~ a:before { background-image: url(%%adFlea%%); }
 
  
 /*image for logged out users*/
@@ -727,7 +784,8 @@ body>.side { margin-top: 310px; } /*MOVES ENTIRE SIDEBAR DOWN*/
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px
 }
-
+/*Fixes search results width issue*/
+.searchpane {margin: 0px!important;}
 
 /*REMOVE DIV UNDER SUBMIT BUTTON*/
 .sidebox.submit .spacer { display: none }
@@ -782,6 +840,7 @@ div.sidebox.submit-text:after {
 }
 .titlebox .usertext .md > h1, .titlebox .usertext .md blockquote > h1 {
     background:url(%%sidebar-bg%%);
+    background-size: 100% 100%!important;
     border-style: none none solid;
     border-width: 0 0 0px;
     color: white;
@@ -790,9 +849,11 @@ div.sidebox.submit-text:after {
     width:298px;
     z-index: 99;
     font-weight:normal;
+    font-size: 150%;
 }
 .titlebox .usertext .md blockquote > h1 {
     background:url(%%sidebar-bg-arrow%%);
+    background-size: 100% 100%!important;
 }
 .titlebox .usertext .md > h2, .titlebox .usertext .md blockquote > h2 {
     background:url(%%sidebar-bg%%);
@@ -1107,7 +1168,7 @@ html[lang="lo"] .thing.self {
     font-weight: bold;
     background: #1D486A;}
 html:lang(do) .linkflair-daily{
-    display: none
+    display: none;
     }
 
 /*ONLY NEWS POSTS NI = NEWS IN */
@@ -1124,7 +1185,25 @@ html:lang(do) .linkflair-daily{
     font-weight: bold;
     background: #1D486A;}
 html:lang(ni) .link:not(.linkflair-newspost) {
-display: none}
+display: none;
+}
+
+/*ONLY QUALITY POSTS */
+.side a[href*='#qu'] { 
+    width: 271px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    border: 2px solid black;
+    font-size: 100%;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    background: #1D486A;}
+html:lang(qu) .link:not(.linkflair-qualitypost) {
+display: none;
+}
 
 
 /**********END FILTERING SYSTEM**********/
@@ -1176,6 +1255,8 @@ display: none}
     vertical-align: middle;
     padding-top: 3px;
 }
+
+
 
 /* VARIOUS HEADERS - EXAMPLES HERE: http://i.imgur.com/gKMXw90.png */
 /* 1 #'S GETS 200% FONT */
@@ -1285,6 +1366,16 @@ wiki-page .wiki-page-content .discussionlink {
     text-decoration: underline;
     color: #B82A2F !important;
     margin-bottom: -3px;
+}.
+
+.wiki-page a[href="/flowchart"] {
+    display:inline-block;
+    height:1280px;
+    width:271px;
+    padding: 0px 0px 0px 0px;
+    z-index:10;
+    background:url(%%flowchart%%) no-repeat 0 0;
+    background-position: 0 0px;
 }
 
 
@@ -1296,6 +1387,7 @@ wiki-page .wiki-page-content .discussionlink {
 .search-page .tabmenu li a {
     height: 43px !important;
 }
+
 
 
 /*SUBMIT PAGE ADJUSTMENTS*/
@@ -1335,6 +1427,50 @@ wiki-page .wiki-page-content .discussionlink {
     width: 520px;
     border-top: 4px solid #1D486A !important;
     padding-top: 10px;
+}
+
+/*IMAGE IN TEXT SUBMIT BOX*/
+.submit-page .usertext  textarea:not(:focus){
+background-image: url(%%Untitled2%%);
+background-repeat: no-repeat;
+}
+
+/*RULES STYLING*/
+.submit-page .formtabs-content .infobar { margin-top: 809px;}
+.submit-page .submit_text {
+position: absolute;
+top: 220px;
+max-height: 670px;
+max-width: 520px;
+font-family: arial;
+overflow: auto;
+background: #F6F6F6;
+padding: 20px 10px 100px 10px;
+border: 1px solid #c2d6e9;
+}
+.submit-page .submit_text h6 {
+    margin-top: 0.5em;
+    color: #333;
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+}
+.submit-page .submit_text strong {
+    margin-left: 20px; 
+    border-bottom: 1px solid #c2d6e9;
+    font-size: 1.2em;
+}
+.submit-page .submit_text h5 {
+    margin-left: 25px; 
+}
+.submit-page .submit_text hr { 
+margin: 10px 0 10px 20px;
+width: 70%;
+border: 0;
+height: 1px;
+background-image: -webkit-linear-gradient(left, rgba(183,183,183,0), rgba(183,183,183,0.75), rgba(183,183,183,0)); 
+background-image:    -moz-linear-gradient(left, rgba(183,183,183,0), rgba(183,183,183,0.75), rgba(183,183,183,0)); 
+background-image:     -ms-linear-gradient(left, rgba(183,183,183,0), rgba(183,183,183,0.75), rgba(183,183,183,0)); 
+background-image:      -o-linear-gradient(left, rgba(183,183,183,0), rgba(183,183,183,0.75), rgba(183,183,183,0)); 
 }
 
 /********* END OTHER PAGE STYLING*********/
@@ -1449,10 +1585,10 @@ div.commentarea .report-button:hover:after {
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: #4A6D88;
+    background-color: #FF6600;
     background-repeat: no-repeat;
     background-position: -1px 9px;
-    color: black;
+    color: white;
     font-weight: bold;
     z-index: 1000
     }
@@ -1460,7 +1596,7 @@ div.commentarea .report-button:hover:after {
     content: "Please message the mods for prompt service."
     }
 .submit-page button.btn:hover:before {
-    content: "Did you search first?"
+    content: "Did you search and read the rules?"
     }
 
 /*SPECIAL COLORS*/
@@ -1477,12 +1613,14 @@ a[href^="#gold"] + em {
     padding: 0px 5px 0 5px;
 }
 
-/*Remove the slash and asterisk below to make football upvotes active*/
+/* UPPOSTS or UPGOALS or UPBALLS
+   ON - Remove the slash and asterisk to the left of .comment .midcol (below)
+   OFF - Add a slash and asterisk to the left of .comment .midcol (below) */
 
 /*.comment .midcol {
     width: 25px;
 }
- .arrow.up { 
+.arrow.up { 
     background: url(%%goal%%) no-repeat;
     right: 3px;
     width: 30px;
@@ -1491,7 +1629,7 @@ a[href^="#gold"] + em {
     align-content: center;
 }
 .arrow.upmod { 
-    background: url(%%goal%%) no-repeat;
+    background: url(%%goldengoal%%) no-repeat;
     right: 6px;
     width: 30px;
     height: 30px;
@@ -1502,8 +1640,19 @@ a[href^="#gold"] + em {
     cursor: not-allowed;
 }
 .link .score {
-margin-left: 2px;
+margin-left: -2px;
 }
+.comments-page .link .score {
+margin-left: 5px;
+}
+.new-page .link .score {
+margin-left: -2px;
+}
+.rising-page .link .score {
+margin-left: 5px;
+}
+
+
 .thing .upmod:focus:after {
     content: "it's good!";
     position: absolute;
@@ -1700,7 +1849,7 @@ div.side .md table {
    float: none;
    margin-top: 4px;
    margin-bottom: 4px;
-   background-color: #4A6D88!important;
+   background-color: #FF6600!important; /*this changes the background color*/
    color: #FFF;
    display: block;
    background: none;
@@ -1713,27 +1862,120 @@ div.side .md table {
    background-position: 2px -7127px;
 }
 .side .sidecontentbox a.helplink:hover {
-   background-color: #c2d6e9 !important;
-   color: #1D486A;
+   background-color: #d85600 !important;
+   color: #eee;
 }
 
 
-/*DISTINGUISHED POSTS MOAR DISTINGUISHED*/
-.comment .noncollapsed {
-    position: relative;
+/*SUBSCRIBER EDITS*/ /*inactive*/
+/*.subscribers .word, .users-online .word{
+display:none;
 }
-.noncollapsed .moderator ~ .userattrs:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,160,0,.1);
-    z-index: 10;
-    content: '';
-    padding: 5px;
+.subscribers .number:after { 
+content: " readers"
+}
+.users-online .number:after { 
+content: " users here now" 
+}*/
+
+
+/*TEXT COLORS*/
+/*TEXT COLORS*/
+a[href^="#"] + em { font-style: normal } /* override default italics */
+ /* Sidebar text formatting - specific fonts */
+a[href^="#RED"] + em {
+    margin-top: 0.5em;
+    color: #B82A2F;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+a[href^="#BIG"] + em {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
+/*TEAM COLORS*/
+/*ARIZONA*/a[href^="#ARI"] + em {margin-top: 0.5em;color: #870619;font-weight: 900;font-size: 1.3em;}
+/*ATLANTA*/a[href^="#ATL"] + em {margin-top: 0.5em;color: #BD0D18;font-weight: 900;font-size: 1.3em;}
+/*BALTIMORE*/a[href^="#BAL"] + em {margin-top: 0.5em;color: #280353;font-weight: 900;font-size: 1.3em;}
+/*BUFFALO*/a[href^="#BUF"] + em {margin-top: 0.5em;color: #00338D;font-weight: 900;font-size: 1.3em;}
+/*CAROLINA*/a[href^="#CAR"] + em {margin-top: 0.5em;color: #0088CE;font-weight: 900;font-size: 1.3em;}
+/*CHICAGO*/a[href^="#CHI"] + em {margin-top: 0.5em;color: #DD4814;font-weight: 900;font-size: 1.3em;}
+/*CINCINNATI*/a[href^="#CIN"] + em { margin-top: 0.5em;color: #FB4F14;font-weight: 900;font-size: 1.3em;}
+/*CLEVELAND*/a[href^="#CLE"] + em {margin-top: 0.5em;color: #26201E;font-weight: 900;font-size: 1.3em;}
+/*DALLAS*/a[href^="#DAL"] + em {margin-top: 0.5em;color: #002244;font-weight: 900;font-size: 1.3em;}
+/*DENVER*/a[href^="#DEN"] + em {margin-top: 0.5em;color: #FB4F14;font-weight: 900;font-size: 1.3em;}
+/*DETROIT*/a[href^="#DET"] + em {margin-top: 0.5em;color: #006DB0;font-weight: 900;font-size: 1.3em;}
+/*GREEN BAY*/a[href^="#GB"] + em {margin-top: 0.5em;color: #213D30;font-weight: 900;font-size: 1.3em;}
+/*HOUSTON*/a[href^="#HOU"] + em {margin-top: 0.5em;color: #02253A;font-weight: 900;font-size: 1.3em;}
+/*INDIANAPOLIS*/a[href^="#IND"] + em {margin-top: 0.5em;color: #003B7B;font-weight: 900;font-size: 1.3em;} 
+/*JACKSONVILLE*/a[href^="#JAX"] + em {margin-top: 0.5em;color: #000000;font-weight: 900;font-size: 1.3em;}
+/*KANSAS CITY*/a[href^="#KC"] + em {margin-top: 0.5em;color: #B20032;font-weight: 900;font-size: 1.3em;} 
+/*MIAMI*/a[href^="#MIA"] + em {margin-top: 0.5em;color: #008d97;font-weight: 900;font-size: 1.3em;}
+/*MINNESOTA*/a[href^="#MIN"] + em {margin-top: 0.5em;color: #4F2682;font-weight: 900;font-size: 1.3em;}
+/*NEW ENGLAND*/a[href^="#NE"] + em {margin-top: 0.5em;color: #0D254C;font-weight: 900;font-size: 1.3em;}
+/*NEW ORLEANS*/a[href^="#NO"] + em {margin-top: 0.5em;color: #D2B887;font-weight: 900;font-size: 1.3em;}
+/*NEW YORK*/a[href^="#NYG"] + em {margin-top: 0.5em;color: #192F6B;font-weight: 900;font-size: 1.3em;}
+/*NEW YORK*/a[href^="#NYJ"] + em {margin-top: 0.5em;color: #0C371D;font-weight: 900;font-size: 1.3em;}
+/*OAKLAND*/a[href^="#OAK"] + em {margin-top: 0.5em;color: #000000;font-weight: 900;font-size: 1.3em;}
+/*PHILADELPHIA*/a[href^="#PHI"] + em {margin-top: 0.5em;color: #003B48;font-weight: 900;font-size: 1.3em;}
+/*PITTSBURGH*/a[href^="#PIT"] + em {margin-top: 0.5em;color: #000000;font-weight: 900;font-size: 1.3em;}
+/*SAN DIEGO*/a[href^="#SD"] + em {margin-top: 0.5em;color: #08214A;font-weight: 900;font-size: 1.3em;}
+/*SAN FRANCISCO*/a[href^="#SF"] + em {margin-top: 0.5em;color: #AF1E2C;font-weight: 900;font-size: 1.3em;}
+/*SEATTLE*/a[href^="#SEA"] + em {margin-top: 0.5em;color: #06192E;font-weight: 900;font-size: 1.3em;}
+/*ST. LOUIS*/a[href^="#STL"] + em {margin-top: 0.5em;color: #13264B;font-weight: 900;font-size: 1.3em;}
+/*TAMPA BAY*/a[href^="#TB"] + em {margin-top: 0.5em;color: #D60A0B;font-weight: 900;font-size: 1.3em;}
+/*TENNESSEE*/a[href^="#TEN"] + em {margin-top: 0.5em;color: #648FCC;font-weight: 900;font-size: 1.3em;}
+/*WASHINGTON*/a[href^="#WAS"] + em {margin-top: 0.5em;color: #773141;font-weight: 900;font-size: 1.3em;}
+
+
+/*LIVE THREAD STYLING*/
+body.embed.liveupdate-app .content {
+    margin: -1px 15px 0px 10px !important;
+}
+
+/*EASTER EGGS*/
+.debuginfo:before {
+    content: url(%%hellman%%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 0px;
+    transition: height .5s ease-in;
+    -webkit-transition: height .5s ease-in;
+    -moz-transition: height .5s ease-in;
+    -o-transition: height .5s ease-in;
+    -ms-transition: height .5s ease-in;
+}
+.debuginfo:hover:before {
+    content: url(%%hellman%%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: fixed;
+    left:0px;
+    bottom: 0px;
+    height: 240px;
+    transition: height 3s .5s ease-in;
+    -webkit-transition: height 3s .5s ease-in;
+    -moz-transition: height 3s .5s ease-in;
+    -o-transition: height 3s .5s ease-in;
+    -ms-transition: height 3s .5s ease-in;
+}
+
+/*MODERATOR NOTE*/
+/*REPLACE xxx WITH POST ID*/
+/*ENTER NOTE BETWEEN " "*/
+/*.id-xxx .expando:before { 
+content: ""!important; 
+color: green!important;
+font-size: 1.2em;
+}*/
 
 /********* END MISC STYLE *********/
+
+
+
+
 
