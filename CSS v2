@@ -4,7 +4,7 @@
                                    ///////     FFFFFFFFFFFFFFFFFFFFFF  FFFFFFFFFFFFFFFFFFFFFF
                                   /:::::/      F::::::::::::::::::::F  F::::::::::::::::::::F
                                  /:::::/       F::::::::::::::::::::F  F::::::::::::::::::::F
-                                /:::::/        FF::::::FFFFFFFFF::::F  FF::::::FFFFFFFFF::::F
+                                /:::::/        FF::::::FFFFFFFFF::::F  FF::::::FFFFFFFFF::::Fu
 rrrrr   rrrrrrrrr              /:::::/           F:::::F       FFFFFF    F:::::F       FFFFFF
 r::::rrr:::::::::r            /:::::/            F:::::F                 F:::::F             
 r:::::::::::::::::r          /:::::/             F::::::FFFFFFFFFF       F::::::FFFFFFFFFF   
@@ -25,7 +25,7 @@ rr::::::rrrrr::::::r        /:::::/              F:::::::::::::::F       F::::::
                                      by dharasick 
                               with help from barroomhero
                         and stolen elements from dozens of subs
-                                Last updated: 9/29/2014
+                                Last updated: 11/17/2014
 
                                    old stylesheets:
                              http://pastebin.com/xPmmr4iY
@@ -1875,7 +1875,7 @@ display:none;
 content: " readers"
 }
 .users-online .number:after { 
-content: " users here now" 
+content: " armchair lawyers here now" 
 }*/
 
 
@@ -1973,9 +1973,16 @@ color: green!important;
 font-size: 1.2em;
 }*/
 
+/*#baconBit {  
+position: fixed!important;
+height: 300px!important;
+width: 300px!important;
+background-image: url(%%gordon%%)!important;
+-webkit-transition: all 5s linear !important;
+-moz-transition: all 5s linear !important;
+-o-transition: all 5s linear !important;
+-ms-transition: all 5s linear !important;
+}*/
+
+
 /********* END MISC STYLE *********/
-
-
-
-
-
